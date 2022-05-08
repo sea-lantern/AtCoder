@@ -42,4 +42,16 @@ int main() {
         else ng = m;
     }
     OUT(ok);
+
+
+    /*-------------------エラトステネスの篩-------------------*/
+    vector<bool> prime(1000010, true);
+    prime[0] = false;
+    prime[1] = false;
+    for (int i = 2; i * i <= 1000010; i++) {
+        if (!prime[i]) continue;
+        for (int j = i * i; j <= 1000010; j += i) {
+            prime[j] = false;
+        }
+    }
 }
