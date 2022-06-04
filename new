@@ -1,0 +1,9 @@
+#!/bin/bash
+# ./new.sh abc 001
+
+if mkdir $1/$2; then
+for s in 'a' 'b' 'c' 'd' 'e' 'f' 'g' 'h'
+do
+  cp etc/tmp.cpp $1/$2/${s}.cpp
+done
+fi
