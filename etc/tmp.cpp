@@ -15,6 +15,9 @@ int main() {
     ios::sync_with_stdio(false); cin.tie(0);
     ll N;
     cin >> N;
+
+    VI A(N);
+    REP(i, N) cin >> A[i];
     
     OUT("");
 }
