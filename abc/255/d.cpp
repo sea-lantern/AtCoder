@@ -13,11 +13,24 @@ typedef vector<VI> VVI;
 
 int main() {
     ios::sync_with_stdio(false); cin.tie(0);
-    ll N;
-    cin >> N;
+    ll N, Q;
+    cin >> N >> Q;
 
     VI A(N);
     REP(i, N) cin >> A[i];
+
+    sort(ALL(A));
     
-    OUT("");
+    VI S(N+1);
+    REP(i, N) S[i+1] = A[i] + S[i];
+
+    while(Q--){
+        ll X;
+        cin >> X;
+
+        ll l = lower_bound(ALL(A), X) - A.begin() - 1;
+        ll r = lower_bound(ALL(A), X + 1) - A.begin();
+
+        OUT(X * (l + 1) - S[l + 1] - X * (N - r) + S[N] - S[r]);
+    }
 }

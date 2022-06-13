@@ -13,11 +13,12 @@ typedef vector<VI> VVI;
 
 int main() {
     ios::sync_with_stdio(false); cin.tie(0);
-    ll N;
-    cin >> N;
+    ll R, C;
+    cin >> R >> C;
 
-    VI A(N);
-    REP(i, N) cin >> A[i];
+    VVI A(2, VI(2));
+    cin >> A[0][0] >> A[0][1];
+    cin >> A[1][0] >> A[1][1];
     
-    OUT("");
+    OUT(A[R-1][C-1]);
 }

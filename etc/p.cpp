@@ -32,6 +32,14 @@ struct UnionFind{
 };
 
 int main() {
+    /*-------------------出力0埋め-------------------*/
+    cout << setfill('0') << setw(4) << 12;          //0012
+    cout << setfill('0') << right << setw(4) << 12; //0012
+    cout << setfill('0') << left << setw(4) << 12;  //1200
+
+    cout << fixed << setprecision(10) << 3.141592 << "\n";
+
+
     /*-------------------2文探索(binary search)-------------------*/
     // okはみたす
     // ngはみたさない
@@ -54,4 +62,5 @@ int main() {
             prime[j] = false;
         }
     }
+    
 }
