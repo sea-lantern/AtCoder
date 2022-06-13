@@ -1,4 +1,4 @@
 #!/bin/bash
-# ./build.sh abc 001 a
+# ./build abc 001 a
 
-g++-9 -g -o etc/a.out $1/$2/$3.cpp && <etc/in etc/a.out
+g++-9 -Wall -Wextra -O2 -o etc/a.out $1/$2/$3.cpp && <etc/in etc/a.out
