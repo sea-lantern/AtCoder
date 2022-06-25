@@ -20,8 +20,7 @@ int main() {
 
     REP(i, N / 2 + 1){
         ans[i * 2] = i + 1;
-        if(i * 2 + 1 < N && N % 2 == 0) ans[i * 2 + 1] = i + 1 + N / 2;
-        if(i * 2 + 1 < N && N % 2 == 1) ans[i * 2 + 1] = i + 2 + N / 2;
+        if(i * 2 + 1 < N && N % 2 == 0) ans[i * 2 + 1] = i + 1 + N % 2 + N / 2;
     }
 
     REP(_, N) {
