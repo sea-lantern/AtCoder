@@ -31,6 +31,16 @@ struct UnionFind{
     bool same(int x, int y){ return find(x) == find(y);}
 };
 
+/*-------------------DFS(深さ優先探索)-------------------*/
+// 連結無向グラフでpは元居た場所に戻ることを防ぐ
+// 2 * 10 ^ 5 + 10
+VVI way(200010);
+void dfs(ll c, ll p = -1) {
+    for(auto w: way[c]) if(p != w) {
+        dfs(w, c);
+    }
+}
+
 int main() {
     /*-------------------出力0埋め-------------------*/
     cout << setfill('0') << setw(4) << 12;          //0012
